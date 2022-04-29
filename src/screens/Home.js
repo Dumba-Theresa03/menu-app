@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { AuthContext } from "../context/auth.Context";
+import Header from '../components/Header'
 
 function Home() {
-  return (
-    <div>
-Dumba Theresa
-    </div>
-  )
+  const { user } = useContext(AuthContext);
+  console.log(user);
+  return <section><Header/></section>;
 }
 
-export default Home
+export default Home;
